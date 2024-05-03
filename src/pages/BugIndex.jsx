@@ -8,12 +8,12 @@ import { BugFilters } from "../cmps/BugFilters.jsx";
 
 export function BugIndex() {
   const [bugs, setBugs] = useState([]);
-  const [filterBy, setFilterBy] = useState({});
+  const [filterBy, setFilterBy] = useState({ pageIdx: 0 });
   const debouncedOnSetFilterBy = useCallback(
     utilService.debounce(onSetFilterBy, 1000),
     []
   );
-
+  const bugsPerPage = 4; //magic number
   useEffect(() => {
     loadBugs();
   }, [filterBy]);

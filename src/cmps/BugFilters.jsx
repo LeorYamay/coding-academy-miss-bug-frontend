@@ -29,7 +29,7 @@ export function BugFilters({ filterBy, onSetFilterBy }) {
           name="createdAfter"
           value={internalFilterBy.createdAfter}
           onChange={handleInputChange}
-          onBlur={applyFilters} // Apply filters when input loses focus
+          onBlur={applyFilters} 
         />
       </label>
       <label>
@@ -39,7 +39,7 @@ export function BugFilters({ filterBy, onSetFilterBy }) {
           name="createdBefore"
           value={internalFilterBy.createdBefore}
           onChange={handleInputChange}
-          onBlur={applyFilters} // Apply filters when input loses focus
+          onBlur={applyFilters} 
         />
       </label>
       <label>
@@ -49,7 +49,7 @@ export function BugFilters({ filterBy, onSetFilterBy }) {
           name="minSeverity"
           value={internalFilterBy.minSeverity}
           onChange={handleInputChange}
-          onBlur={applyFilters} // Apply filters when input loses focus
+          onBlur={applyFilters} 
         />
       </label>
       <label>
@@ -59,7 +59,7 @@ export function BugFilters({ filterBy, onSetFilterBy }) {
           name="maxSeverity"
           value={internalFilterBy.maxSeverity}
           onChange={handleInputChange}
-          onBlur={applyFilters} // Apply filters when input loses focus
+          onBlur={applyFilters} 
         />
       </label>
       <label>
@@ -69,7 +69,17 @@ export function BugFilters({ filterBy, onSetFilterBy }) {
           name="txt"
           value={internalFilterBy.txt}
           onChange={handleInputChange}
-          onBlur={applyFilters} // Apply filters when input loses focus
+          onBlur={applyFilters} 
+        />
+      </label>
+      <label>
+        PageNo:
+        <input
+          type="number"
+          name="pageIdx"
+          value={internalFilterBy.PageNo}
+          onChange={handleInputChange}
+          onBlur={applyFilters} 
         />
       </label>
     </div>
